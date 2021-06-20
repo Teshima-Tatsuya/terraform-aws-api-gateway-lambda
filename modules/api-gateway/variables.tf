@@ -1,0 +1,5 @@
+variable "common" {}
+
+variable "lambda" {
+
+}
