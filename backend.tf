@@ -1,8 +1,9 @@
 terraform {
-  backend "s3" {
-    bucket  = "teshima-terraform-tfstate"
-    key     = "tfstate/api-gateway-lambda.tfstate"
-    region  = "ap-northeast-1"
-    profile = "terraform"
+  cloud {
+    hostname = "app.terraform.io"
+    organization = "teshima"
+    workspaces {
+      name = "terraform-aws-api-gateway-lambda"
+    }
   }
 }
