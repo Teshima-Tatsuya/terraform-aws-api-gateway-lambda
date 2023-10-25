@@ -6,7 +6,6 @@ module "lambda" {
   source = "./modules/lambda"
 
   role       = module.iam.iam_role_arn
-  common     = var.common
   apigateway = module.api-gateway.apigateway
 
   depends_on = [

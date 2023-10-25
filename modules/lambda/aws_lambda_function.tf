@@ -1,7 +1,7 @@
-resource "aws_lambda_function" "sample" {
-  function_name = var.common.function_name
+resource "aws_lambda_function" "helloworld" {
+  function_name = "api-gateway-sample"
   role          = var.role
-  handler       = "sample.lambda_handler"
+  handler       = "api-gateway-sample.lambda_handler"
   runtime       = "python3.8"
-  filename      = "${path.module}/archive/sample.zip"
+  filename      = "${path.module}/archive/helloworld.zip"
 }

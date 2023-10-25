@@ -1,7 +1,7 @@
 data "archive_file" "sample_function" {
   type        = "zip"
   source_dir  = "${path.module}/src"
-  output_path = "${path.module}/archive/sample.zip"
+  output_path = "${path.module}/archive/helloworld.zip"
 }
 
 data "aws_region" "current" {}
