@@ -1,5 +1,3 @@
-variable "common" {}
-
 variable "lambda" {
 
 }

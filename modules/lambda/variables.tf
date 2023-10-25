@@ -1,5 +1,2 @@
 variable "role" {}
-
-variable "apigateway" {
-
-}
+variable "apigateway" {}
