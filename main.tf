@@ -16,6 +16,5 @@ module "lambda" {
 module "api-gateway" {
   source = "./modules/api-gateway"
 
-  common = var.common
   lambda = module.lambda.lambda
 }
