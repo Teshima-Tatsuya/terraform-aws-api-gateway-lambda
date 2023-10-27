@@ -3,7 +3,7 @@ data "aws_acm_certificate" "aws" {
 }
 
 resource "aws_api_gateway_domain_name" "api" {
-  certificate_arn = data.aws_acm_certificate.aws.arn
+  regional_certificate_arn = data.aws_acm_certificate.aws.arn
   domain_name = "api.aws.tessy.dev"
 
   endpoint_configuration {
