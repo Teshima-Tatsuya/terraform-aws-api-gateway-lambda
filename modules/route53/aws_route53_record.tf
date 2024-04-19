@@ -6,6 +6,6 @@ resource "aws_route53_record" "api" {
   alias {
     evaluate_target_health = true
     name = var.apigateway.aws_api_gateway_domain_name.domain_name
-    zone_id = var.aws_api_gateway_domain_name.regional_zone_id
+    zone_id = var.apigateway.aws_api_gateway_domain_name.regional_zone_id
   }
 }

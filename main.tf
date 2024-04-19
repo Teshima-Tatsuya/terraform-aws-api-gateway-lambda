@@ -6,14 +6,14 @@ module "lambda" {
   source = "./modules/lambda"
 
   role       = module.iam.iam_role_arn
-  apigateway = module.api-gateway.apigateway
+  apigateway = module.apigateway.apigateway
 
   depends_on = [
     module.iam
   ]
 }
 
-module "api-gateway" {
+module "apigateway" {
   source = "./modules/api-gateway"
 
   lambda = module.lambda.lambda
