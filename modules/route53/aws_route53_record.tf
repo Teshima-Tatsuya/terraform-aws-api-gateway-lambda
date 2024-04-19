@@ -1,5 +1,5 @@
 resource "aws_route53_record" "api" {
-  name = var.apigateway.aws_api_gateway_domain_name.domain_name
+  name = var.route53.domain_name
   type = "A"
   zone_id = var.route53.zone_id
 

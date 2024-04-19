@@ -8,6 +8,7 @@ locals {
     }
 
     route53 = {
+        domain_name = data.terraform_remote_state.domain-management.outputs.domain.domain_name
         zone_id = data.terraform_remote_state.domain-management.outputs.domain.zone_id
     }
 }
