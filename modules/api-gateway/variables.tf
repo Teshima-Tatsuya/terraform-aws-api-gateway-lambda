@@ -1,3 +1,2 @@
-variable "lambda" {
-
-}
+variable "lambda" { }
+variable "apigateway" { }

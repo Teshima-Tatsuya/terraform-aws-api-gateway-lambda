@@ -1,10 +1,6 @@
-data "aws_acm_certificate" "aws" {
-  domain = "*.aws.tessy.dev"
-}
-
 resource "aws_api_gateway_domain_name" "api" {
-  regional_certificate_arn = data.aws_acm_certificate.aws.arn
-  domain_name = "api.aws.tessy.dev"
+  regional_certificate_arn = var.apigateway.certificate_arn
+  domain_name = var.apigateway.domain_name
 
   endpoint_configuration {
     types = ["REGIONAL"]

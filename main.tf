@@ -17,4 +17,5 @@ module "api-gateway" {
   source = "./modules/api-gateway"
 
   lambda = module.lambda.lambda
+  apigateway = local.apigateway
 }
