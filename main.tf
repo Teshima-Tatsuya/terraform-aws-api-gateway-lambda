@@ -19,3 +19,10 @@ module "api-gateway" {
   lambda = module.lambda.lambda
   apigateway = local.apigateway
 }
+
+module "route53" {
+  source = "./modules/route53"
+
+  apigateway = module.apigateway.apigateway
+  route53 = local.route53
+}
